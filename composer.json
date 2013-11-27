@@ -1,0 +1,23 @@
+{
+    "name": "devilcius/sdd-generator-bundle",
+    "description": "SEPA Direct Debit (SDD) XML Generator",
+    "keywords": ["sepa", "symfony2", "bundle"],
+	"homepage": "https://github.com/devilcius/SDDGeneratorBundle",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marcos",
+            "email": "devilcius@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/symfony": "2.*"
+    },
+    "autoload": {
+        "psr-0": { "devilcius\\SDDGeneratorBundle": "" }
+    },
+    "minimum-stability": "dev",
+    "target-dir": "devilcius/SDDGeneratorBundle"
+}
