@@ -154,7 +154,7 @@ class SEPAPaymentInfo
   {
     $pmtInfId = URLify::downcode($pmtInfId, "de");
 
-    if (!preg_match("/^([A-Za-z0-9]|[\+|\?|\/|\-|:|\(|\)|\.|,|'| ]) {1,35}\z/", $pmtInfId)) {
+    if (!preg_match("/^([A-Za-z0-9]|[\+|\?|\/|\-|:|\(|\)|\.|,|'| ]){1,35}\z/", $pmtInfId)) {
             throw new SEPAException("PmtInfId empty, contains invalid characters or too long (max. 35).");
         }
 
