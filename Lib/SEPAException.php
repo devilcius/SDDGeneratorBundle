@@ -10,6 +10,6 @@
 
 namespace devilcius\SDDGeneratorBundle\Lib;
 
-class SEPAException extends Exception
+class SEPAException extends \Exception
 {
 }
