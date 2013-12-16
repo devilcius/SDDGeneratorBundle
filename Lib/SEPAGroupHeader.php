@@ -10,6 +10,8 @@
 
 namespace devilcius\SDDGeneratorBundle\Lib;
 
+use \SimpleXMLElement as SimpleXMLElement;
+
 class SEPAGroupHeader
 {
   /**
@@ -84,7 +86,7 @@ class SEPAGroupHeader
    */
   public function getCreationDateTime()
   {
-    $creationDate = new DateTime();
+    $creationDate = new \DateTime();
 
     if (!$this->creationDateTime) {
             $this->creationDateTime = $creationDate->format('Y-m-d\TH:i:s');
