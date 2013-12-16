@@ -353,7 +353,7 @@ class SEPAPaymentInfo
   {
     $iban = str_replace(' ', '', trim($iban));
 
-    if (!preg_match("/^[a-zA-Z]{2}[0-9]{2}[a-zA-Z0-9]{4}[0-9]{7}([a-zA-Z0-9]?) {0,16}\z/i", $iban)) {
+    if (!preg_match("/^[a-zA-Z]{2}[0-9]{2}[a-zA-Z0-9]{4}[0-9]{7}([a-zA-Z0-9]?){0,16}\z/i", $iban)) {
             throw new SEPAException("Invalid creditor IBAN.");
         }
 
