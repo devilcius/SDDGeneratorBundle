@@ -132,7 +132,7 @@ class SEPADirectDebitTransaction
     {
         $instrId = URLify::downcode($instrId, "de");
 
-        if (!preg_match("/^([\-A-Za-z0-9\+\/\?:\(\)\., ]) {0,35}\z/", $instrId)) {
+        if (!preg_match("/^([\-A-Za-z0-9\+\/\?:\(\)\., ]){0,35}\z/", $instrId)) {
             throw new SEPAException("Invalid InstructionIdentification (max. 35).");
         }
 
@@ -159,7 +159,7 @@ class SEPADirectDebitTransaction
     {
         $endToEndId = URLify::downcode($endToEndId, "de");
 
-        if (!preg_match("/^([\-A-Za-z0-9\+\/\?:\(\)\., ]) {1,35}\z/", $endToEndId)) {
+        if (!preg_match("/^([\-A-Za-z0-9\+\/\?:\(\)\., ]){1,35}\z/", $endToEndId)) {
             throw new SEPAException("Invalid EndToEndIdentification (max. 35).");
         }
 
@@ -206,7 +206,7 @@ class SEPADirectDebitTransaction
     {
         $mndtId = URLify::downcode($mndtId, "de");
 
-        if (!preg_match("/^([A-Za-z0-9]|[\+|\?|\/|\-|:|\(|\)|\.|,|']) {1,35}\z/", $mndtId)) {
+        if (!preg_match("/^([A-Za-z0-9]|[\+|\?|\/|\-|:|\(|\)|\.|,|']){1,35}\z/", $mndtId)) {
             throw new SEPAException("MndtId empty, contains invalid characters or too long (max. 35).");
         }
 
@@ -331,7 +331,7 @@ class SEPADirectDebitTransaction
     {
         $iban = str_replace(' ', '', trim($iban));
 
-        if (!preg_match("/^[a-zA-Z]{2}[0-9]{2}[a-zA-Z0-9]{4}[0-9]{7}([a-zA-Z0-9]?) {0,16}\z/i", $iban)) {
+        if (!preg_match("/^[a-zA-Z]{2}[0-9]{2}[a-zA-Z0-9]{4}[0-9]{7}([a-zA-Z0-9]?){0,16}\z/i", $iban)) {
             throw new SEPAException("Invalid debtor IBAN.");
         }
 
@@ -358,7 +358,7 @@ class SEPADirectDebitTransaction
     {
         $ustrd = URLify::downcode($ustrd, "de");
 
-        if (!preg_match("/^([A-Za-z0-9]|[\+|\?|\/|\-|:|\(|\)|\.|,|'| ]) {0,140}\z/", $ustrd)) {
+        if (!preg_match("/^([A-Za-z0-9]|[\+|\?|\/|\-|:|\(|\)|\.|,|'| ]){0,140}\z/", $ustrd)) {
             throw new SEPAException("RmtInf contains invalid chars or is too long (max. 140).");
         }
 
