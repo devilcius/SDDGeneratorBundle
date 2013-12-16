@@ -10,6 +10,8 @@
 
 namespace devilcius\SDDGeneratorBundle\Lib;
 
+use \SimpleXMLElement as SimpleXMLElement;
+
 class SEPAPaymentInfo
 {
   /**
@@ -287,7 +289,7 @@ class SEPAPaymentInfo
    */
   public function getRequestedCollectionDate()
   {
-    $reqdColltnDt = new DateTime();
+    $reqdColltnDt = new \DateTime();
 
     if (!$this->requestedCollectionDate) {
             $this->requestedCollectionDate = $reqdColltnDt->format('Y-m-d');
