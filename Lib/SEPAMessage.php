@@ -10,6 +10,8 @@
 
 namespace devilcius\SDDGeneratorBundle\Lib;
 
+use \SimpleXMLElement as SimpleXMLElement;
+
 class SEPAMessage
 {
   /**
