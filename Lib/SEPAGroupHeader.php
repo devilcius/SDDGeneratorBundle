@@ -70,7 +70,7 @@ class SEPAGroupHeader
   {
     $msgId = URLify::downcode($msgId, "de");
 
-    if (!preg_match("/^([A-Za-z0-9]|[\+|\?|\/|\-|:|\(|\)|\.|,|'| ]) {1,35}\z/", $msgId)) {
+    if (!preg_match("/^([A-Za-z0-9]|[\+|\?|\/|\-|:|\(|\)|\.|,|'| ]){1,35}\z/", $msgId)) {
             throw new SEPAException("MsgId empty, contains invalid characters or too long (max. 35).");
         }
 
