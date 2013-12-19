@@ -11,7 +11,7 @@
 
 namespace devilcius\SDDGeneratorBundle\Lib;
 
-use \SimpleXMLElement as SimpleXMLElement;d
+use \SimpleXMLElement as SimpleXMLElement;
 
 class SEPADirectDebitTransaction
 {
