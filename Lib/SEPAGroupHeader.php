@@ -53,6 +53,13 @@ class SEPAGroupHeader
   private $initiatingPartyName = '';
 
   /**
+   * Identification of party that initiates the payment. (Tag: <InitgPty->Id->OrgId->Othr->Id>)
+   *
+   * @var string
+   */
+  private $initiatingIdentification = '';
+
+  /**
    * Getter for Message Identification (MsgId)
    *
    * @return string
@@ -168,7 +175,7 @@ class SEPAGroupHeader
    */
   public function setInitiatingPartyName($initgPty)
   {
-    $initgPty = URLify::downcode($initgPty, "de");
+    $initgPty = URLify::downcode($initgPty, "latin");
 
     if (strlen($initgPty) == 0 || strlen($initgPty) > 70) {
             throw new SEPAException("Invalid initiating party name (max. 70).");
@@ -177,6 +184,33 @@ class SEPAGroupHeader
         $this->initiatingPartyName = $initgPty;
   }
 
+  /**
+   * Getter for Initiating Identification(InitgPty->Id->OrgId->Othr->Id)
+   *
+   * @return string
+   */
+  public function getInitiatingIdentification()
+  {
+    return $this->initiatingIdentification;
+  }  
+  
+  /**
+   * Setter for Initiating Party Name (InitgPty->Nm)
+   *
+   * @param string $id
+   * @throws SEPAException
+   */
+  public function setInitiatingIdentification($id)
+  {
+    $id = URLify::downcode($id, "latin");
+
+    if (strlen($id) == 0 || strlen($id) > 35) {
+            throw new SEPAException("Invalid initiating identification (max. 35).");
+        }
+
+        $this->initiatingIdentification = $id;
+  }  
+  
   /**
    * Returns a SimpleXMLElement for the SEPAGroupHeader object.
    *
@@ -190,7 +224,7 @@ class SEPAGroupHeader
     $xml->addChild('NbOfTxs', $this->getNumberOfTransactions());
     $xml->addChild('CtrlSum', $this->getControlSum());
     $xml->addChild('InitgPty')->addChild('Nm', $this->getInitiatingPartyName());
-
+    $xml->InitgPty->addChild('Id')->addChild('OrgId')->addChild('Othr')->addChild('Id', $this->getInitiatingIdentification());
     return $xml;
   }
 }
