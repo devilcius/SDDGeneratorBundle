@@ -102,7 +102,7 @@ class SEPAMessage
     $this->getGroupHeader()->setNumberOfTransactions($nbOfTxs);
     $this->getGroupHeader()->setControlSum($ctrlSum);
     $message->GrpHdr->NbOfTxs = $nbOfTxs;
-    $message->GrpHdr->CtrlSum = $ctrlSum;
+    $message->GrpHdr->CtrlSum = number_format((float)$ctrlSum, 2, '.', '');
 
     // Finally add the XML structure
     $doc = new SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?>
