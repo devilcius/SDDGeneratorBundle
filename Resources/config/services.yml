@@ -1,7 +1,7 @@
 parameters:
-#    devilcius_sdd_generator.example.class: devilcius\SDDGeneratorBundle\Example
+    sdd_status.class: devilcius\SDDGeneratorBundle\Lib\SEPADirectDebitStatus
 
 services:
-#    devilcius_sdd_generator.example:
-#        class: %devilcius_sdd_generator.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    devilcius_sdd_status:
+        class: %sdd_status.class%
+        arguments: [ @translator ]  

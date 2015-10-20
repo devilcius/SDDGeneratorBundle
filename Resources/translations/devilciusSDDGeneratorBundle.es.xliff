@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="es" target-language="es" datatype="plaintext" original="devilciusSDDGeneratorBundle.es.xliff">
+        <body>
+            <trans-unit id="AC01">
+                <source>AC01</source>
+                <target>Número de cuenta incorrecto</target>
+            </trans-unit>
+            <trans-unit id="AC04">
+                <source>AC04</source>
+                <target>Cuenta cerrada</target>
+            </trans-unit>
+            <trans-unit id="AC06">
+                <source>AC06</source>
+                <target>Cuenta bloqueada</target>
+            </trans-unit>
+            <trans-unit id="AG01">
+                <source>AG01</source>
+                <target>Operación prohibida</target>
+            </trans-unit>
+            <trans-unit id="AG02">
+                <source>AG02</source>
+                <target>Código de operación financiera inválido</target>
+            </trans-unit>
+            <trans-unit id="AM01">
+                <source>AM01</source>
+                <target>Importe es cero</target>
+            </trans-unit>
+            <trans-unit id="AM02">
+                <source>AM02</source>
+                <target>Importe no permitido</target>
+            </trans-unit>
+            <trans-unit id="AM03">
+                <source>AM03</source>
+                <target>Divisa no permitida</target>
+            </trans-unit>
+            <trans-unit id="AM04">
+                <source>AM04</source>
+                <target>Fondos insuficientes</target>
+            </trans-unit>
+            <trans-unit id="AM05">
+                <source>AM05</source>
+                <target>Duplicada</target>
+            </trans-unit>
+            <trans-unit id="AM06">
+                <source>AM06</source>
+                <target>Importe demasiado bajo</target>
+            </trans-unit>
+            <trans-unit id="AM07">
+                <source>AM07</source>
+                <target>Importe bloqueado</target>
+            </trans-unit>
+            <trans-unit id="AM09">
+                <source>AM09</source>
+                <target>Importe equivocado</target>
+            </trans-unit>
+            <trans-unit id="AM10">
+                <source>AM10</source>
+                <target>Suma de control inválida</target>
+            </trans-unit>
+            <trans-unit id="BE01">
+                <source>BE01</source>
+                <target>Incoherente con el cliente final</target>
+            </trans-unit>
+            <trans-unit id="BE04">
+                <source>BE04</source>
+                <target>Falta la dirección del acreedor</target>
+            </trans-unit>
+            <trans-unit id="BE05">
+                <source>BE05</source>
+                <target>Parte iniciadora no reconocida</target>
+            </trans-unit>
+            <trans-unit id="BE06">
+                <source>BE06</source>
+                <target>Cliente final desconocido</target>
+            </trans-unit>
+            <trans-unit id="BE07">
+                <source>BE07</source>
+                <target>Falta la dirección del deudor</target>
+            </trans-unit>
+            <trans-unit id="DT01">
+                <source>DT01</source>
+                <target>Fecha inválida</target>
+            </trans-unit>
+            <trans-unit id="ED01">
+                <source>ED01</source>
+                <target>Banco corresponsal no permitido</target>
+            </trans-unit>
+            <trans-unit id="ED03">
+                <source>ED03</source>
+                <target>Información del saldo solicitada</target>
+            </trans-unit>
+            <trans-unit id="ED05">
+                <source>ED05</source>
+                <target>Liquidación fallida</target>
+            </trans-unit>
+            <trans-unit id="FF01">
+                <source>FF01</source>
+                <target>Formato de fichero inválido</target>
+            </trans-unit>
+            <trans-unit id="MD01">
+                <source>MD01</source>
+                <target>Ausencia de orden de domiciliación</target>
+            </trans-unit>
+            <trans-unit id="MD02">
+                <source>MD02</source>
+                <target>Falta información obligatoria en la orden de domiciliación</target>
+            </trans-unit>
+            <trans-unit id="MD03">
+                <source>MD03</source>
+                <target>Formato del fichero inválido por razones distintas del indicador de agrupamiento</target>
+            </trans-unit>
+            <trans-unit id="MD04">
+                <source>MD04</source>
+                <target>Formato del fichero inválido debido al indicador de agrupamiento</target>
+            </trans-unit>
+            <trans-unit id="MD06">
+                <source>MD06</source>
+                <target>Solicitud de reembolso hecha por el cliente final</target>
+            </trans-unit>
+            <trans-unit id="MD07">
+                <source>MD07</source>
+                <target>Cliente final fallecido</target>
+            </trans-unit>
+            <trans-unit id="MS02">
+                <source>MS02</source>
+                <target>Razón no especificada, generada por el cliente</target>
+            </trans-unit>
+            <trans-unit id="MS03">
+                <source>MS03</source>
+                <target>Razón no especificada, generada por el agente</target>
+            </trans-unit>
+            <trans-unit id="NARR">
+                <source>NARR</source>
+                <target>Texto</target>
+            </trans-unit>
+            <trans-unit id="RC01">
+                <source>RC01</source>
+                <target>Identificador de la entidad financiera incorrecto</target>
+            </trans-unit>
+            <trans-unit id="RF01">
+                <source>RF01</source>
+                <target>Referencia de la operación no es única</target>
+            </trans-unit>
+            <trans-unit id="RR01">
+                <source>RR01</source>
+                <target>Falta el identificador en la cuenta del ordenante</target>
+            </trans-unit>
+            <trans-unit id="RR02">
+                <source>RR02</source>
+                <target>Falta el nombre o la dirección del ordenante</target>
+            </trans-unit>
+            <trans-unit id="RR03">
+                <source>RR03</source>
+                <target>Falta el nombre o la dirección del beneficiario</target>
+            </trans-unit>
+            <trans-unit id="RR04">
+                <source>RR04</source>
+                <target>Razones regulatorias</target>
+            </trans-unit>
+            <trans-unit id="TM01">
+                <source>TM01</source>
+                <target>Hora de cierre (Cut-off time)</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
