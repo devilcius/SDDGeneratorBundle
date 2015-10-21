@@ -2,6 +2,6 @@ parameters:
     sdd_status.class: devilcius\SDDGeneratorBundle\Lib\SEPADirectDebitStatus
 
 services:
-    devilcius_sdd_status:
+    sdd.status:
         class: %sdd_status.class%
         arguments: [ @translator ]  
