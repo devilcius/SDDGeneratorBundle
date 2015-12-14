@@ -4,4 +4,4 @@ parameters:
 services:
     sdd.status:
         class: %sdd_status.class%
-        arguments: [ @translator ]  
+        arguments: [ @translator.default ]  
