@@ -162,6 +162,10 @@
                 <source>TM01</source>
                 <target>Hora de cierre (Cut-off time)</target>
             </trans-unit>
+            <trans-unit id="SL01">
+                <source>SL01</source>
+                <target>Servicios específicos ofrecidos por la entidad del deudor</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
