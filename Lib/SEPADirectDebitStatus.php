@@ -30,15 +30,22 @@ class SEPADirectDebitStatus
     public function loadFile($xmlContent)
     {
         $this->xmlDocument = new SimpleXMLElement($xmlContent);
+        //register namespace to perform xqueries
+        foreach ($this->xmlDocument->getDocNamespaces() as $strPrefix => $strNamespace) {
+            if (strlen($strPrefix) == 0) {
+                $strPrefix = "a"; //Assign an arbitrary namespace prefix.
+            }
+            $this->xmlDocument->registerXPathNamespace($strPrefix, $strNamespace);
+        }
     }
-    
+
     public function getTransactions()
     {
-        if($this->xmlDocument === null) {
+        if ($this->xmlDocument === null) {
             throw new Exception("XML file not loaded");
         }
-        $xmlObjects = get_object_vars($this->xmlDocument); 
-        $transactions = $xmlObjects['CstmrPmtStsRpt']->OrgnlPmtInfAndSts->TxInfAndSts;
+        $transactions = $this->xmlDocument->xpath('//a:TxInfAndSts');
+
         foreach ($transactions as $transaction) {
             $debitTransaction = new DebitTransaction();
             $debitTransaction->setOriginalIdentification($transaction->OrgnlInstrId);
@@ -49,9 +56,9 @@ class SEPADirectDebitStatus
             }
             $debitTransaction->setReasons($reasons);
             array_push($this->transactions, $debitTransaction);
-        }     
-        
+        }
+
         return $this->transactions;
     }
-    
+
 }
