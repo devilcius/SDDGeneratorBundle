@@ -48,7 +48,7 @@ class SEPADirectDebitStatus
 
         foreach ($transactions as $transaction) {
             $debitTransaction = new DebitTransaction();
-            $debitTransaction->setOriginalIdentification($transaction->OrgnlInstrId);
+            $debitTransaction->setOriginalIdentification($transaction->OrgnlTxRef->MndtRltdInf->MndtId);
             $debitTransaction->setStatus($transaction->TxSts);
             $reasons = array();
             foreach ($transaction->StsRsnInf->Rsn as $reason) {
